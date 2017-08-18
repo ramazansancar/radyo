@@ -1,0 +1,37 @@
+{"radyolar":"listesi","radyo_listesi":[{
+    "adres": "http://185.28.3.4/fenomen/fenomenweb_mpeg_128_home/icecast.audio",
+    "adi": "Radyo Fenomen"
+},{
+    "adres": "http://195.142.106.23/fenomen/fenomenturk_mpeg_128_home/icecast.audio",
+    "adi": "Fenomen Türk"
+},{
+    "adres": "http://37.75.11.179/fenomen/fenomenpop_mpeg_128_home/icecast.audio",
+    "adi": "Fenomen Pop"
+},{
+    "adres": "http://195.142.3.83/fenomen/fenomenclubbin_mpeg_128_home/icecast.audio",
+    "adi": "Fenomen Clubbin"
+},{
+    "adres": "http://195.142.3.82/fenomen/FenomenDans_mpeg_128_home/icecast.audio",
+    "adi": "Fenomen Dans"
+},{
+    "adres": "http://195.142.3.82/fenomen/fenomenyaz_mpeg_128_home/icecast.audio",
+    "adi": "Fenomen Yaz"
+},{
+    "adres": "http://195.142.106.23/fenomen/fenomenrap_mpeg_128_home/icecast.audio",
+    "adi": "Fenomen Rap"
+},{
+    "adres": "http://185.28.3.4/fenomen/FenomenAkustik_mpeg_128_home/icecast.audio",
+    "adi": "Fenomen Akustik"
+},{
+    "adres": "http://195.142.3.83/fenomen/FenomenOriental_mpeg_128_home/icecast.audio",
+    "adi": "Fenomen Oriental"
+},{
+    "adres": "http://195.142.3.82/power/PowerFM_mpeg_128_home/icecast.audio",
+    "adi": "PowerFM"
+},{
+    "adres": "http://195.142.3.82/power/PowerTurk_mpeg_128_home/icecast.audio",
+    "adi": "PowerTürk"
+},{
+    "adres": "a",
+    "adi": "adi"
+}]}
