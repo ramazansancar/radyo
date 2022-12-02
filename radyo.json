@@ -1,37 +1,65 @@
-{"radyolar":"listesi","radyo_listesi":[{
-    "adres": "http://185.28.3.4/fenomen/fenomenweb_mpeg_128_home/icecast.audio",
-    "adi": "Radyo Fenomen"
-},{
-    "adres": "http://195.142.106.23/fenomen/fenomenturk_mpeg_128_home/icecast.audio",
-    "adi": "Fenomen Türk"
-},{
-    "adres": "http://37.75.11.179/fenomen/fenomenpop_mpeg_128_home/icecast.audio",
-    "adi": "Fenomen Pop"
-},{
-    "adres": "http://195.142.3.83/fenomen/fenomenclubbin_mpeg_128_home/icecast.audio",
-    "adi": "Fenomen Clubbin"
-},{
-    "adres": "http://195.142.3.82/fenomen/FenomenDans_mpeg_128_home/icecast.audio",
-    "adi": "Fenomen Dans"
-},{
-    "adres": "http://195.142.3.82/fenomen/fenomenyaz_mpeg_128_home/icecast.audio",
-    "adi": "Fenomen Yaz"
-},{
-    "adres": "http://195.142.106.23/fenomen/fenomenrap_mpeg_128_home/icecast.audio",
-    "adi": "Fenomen Rap"
-},{
-    "adres": "http://185.28.3.4/fenomen/FenomenAkustik_mpeg_128_home/icecast.audio",
-    "adi": "Fenomen Akustik"
-},{
-    "adres": "http://195.142.3.83/fenomen/FenomenOriental_mpeg_128_home/icecast.audio",
-    "adi": "Fenomen Oriental"
-},{
-    "adres": "http://195.142.3.82/power/PowerFM_mpeg_128_home/icecast.audio",
-    "adi": "PowerFM"
-},{
-    "adres": "http://195.142.3.82/power/PowerTurk_mpeg_128_home/icecast.audio",
-    "adi": "PowerTürk"
-},{
-    "adres": "a",
-    "adi": "adi"
-}]}
+{
+	"radyo_listesi":[
+	{
+		"adres": "-",
+		"adi": "-",
+		"status": false
+	},{
+		"adres": "https://live.powerapp.com.tr/fenomen/mpeg/icecast.audio",
+		"adi": "Radyo Fenomen",
+		"status": true
+	},{
+		"adres": "https://live.powerapp.com.tr/fenomenturk/mpeg/icecast.audio",
+		"adi": "Fenomen Türk",
+		"status": true
+	},{
+		"adres": "https://live.powerapp.com.tr/fenomenpop/mpeg/icecast.audio",
+		"adi": "Fenomen Pop",
+		"status": true
+	},{
+		"adres": "https://live.powerapp.com.tr/fenomenclubbin/mpeg/icecast.audio",
+		"adi": "Fenomen Clubbin",
+		"status": true
+	},{
+		"adres": "https://live.powerapp.com.tr/FenomenDans/mpeg/icecast.audio",
+		"adi": "Fenomen Dans",
+		"status": false
+	},{
+		"adres": "https://live.powerapp.com.tr/fenomenyaz/mpeg/icecast.audio",
+		"adi": "Fenomen Yaz",
+		"status": false
+	},{
+		"adres": "https://live.powerapp.com.tr/fenomenrap/mpeg/icecast.audio",
+		"adi": "Fenomen Rap",
+		"status": true
+	},{
+		"adres": "https://live.powerapp.com.tr/FenomenAkustik/mpeg/icecast.audio",
+		"adi": "Fenomen Akustik",
+		"status": false
+	},{
+		"adres": "https://live.powerapp.com.tr/FenomenOriental/mpeg/icecast.audio",
+		"adi": "Fenomen Oriental",
+		"status": false
+	},{
+		"adres": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER_FM_SC?/",
+		"adi": "Super FM",
+		"status": true
+	},{
+		"adres": "https://live.powerapp.com.tr/powerfm/mpeg/icecast.audio",
+		"adi": "PowerFM",
+		"status": true
+	},{
+		"adres": "https://live.powerapp.com.tr/powerturk/mpeg/icecast.audio",
+		"adi": "PowerTürk",
+		"status": true
+	},{
+		"adres": "http://radyo.mersin.edu.tr:8000/meu",
+		"adi": "*Mersin Üni Radyo",
+		"description": "SSL Connection Error",
+		"status": false
+	},{
+		"adres": "https://alanyafm.80.yayin.com.tr/;",
+		"adi": "Alanya Fm",
+		"status": true
+	}
+]}

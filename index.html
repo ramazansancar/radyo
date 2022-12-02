@@ -1,0 +1,87 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radyo Player | ramazansancar.com.tr</title>
+	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.0.min.js"></script>-->
+	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<style>
+	body {
+		background: darkgray;
+	}
+
+	.app{
+		margin: 20% 0 0 33%;
+		height: auto;
+		width: 350px;
+		background-color: gray;
+		border-radius: 25px;
+	}
+
+	.player video {
+		width: 350px;
+		height: 50px;
+	}
+
+	.selectbox{
+		margin: 10px;
+		margin-left: 55px;
+		padding: 10px 0 15px 25px;
+	}
+
+	select#radyolar{
+		width: 200px;
+		height: 50px;
+	}
+	
+	option:disabled {
+    background-color: darkgray;
+}
+	</style>
+</head>
+<body>
+<div class="app">
+	<div class="player">
+		<video id="radyo_player" controls="" autoplay="1" name="media" volume="0.3">
+			<source id="radyo" src="https://live.powerapp.com.tr/fenomen/mpeg/icecast.audio" type="audio/mp3">
+		</video>
+	</div>
+	<div class="selectbox">
+		<select id="radyolar">
+			<option disabled selected>Seçiniz</option>
+		</select>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+	var video = document.getElementById('radyo_player'); // Player 'a uğlaşmak için kullandık
+	video.volume = 0.3;
+	$.getJSON("radyo.json", function(obj) {
+    	$.each(obj.radyo_listesi,function(key,value){
+			if(value.status == true){
+				var ekle = $('<option></option>').val(value.adres).text(value.adi);
+				$("#radyolar").append(ekle);
+			}else{
+				var ekle = $('<option disabled></option>').val(value.adres).text(value.adi);
+				$("#radyolar").append(ekle);
+			}
+    	});
+	});
+
+	document.querySelector('select').addEventListener("change", (event) => { // Select Değişim Yakaladık.
+		//console.log(event)
+		var video = document.getElementById('radyo_player'); // Player 'a uğlaşmak için kullandık
+		var source = document.getElementById('radyo');// Player 'a uğlaşmak için kullandık
+		var radyo_isim = document.getElementById("radyolar");
+		var radyo_deger = document.getElementById("radyolar").value; // Select de seçtiğimiz Radyo adresini bir var 'a atadık.
+		document.title = event.target.selectedOptions["0"].innerText+' - Radyo Player | ramazansancar.com.tr' // Title değiştirdik.
+  		source.src = radyo_deger; // Seçilen Radyo adresini player da src="{buraya}" yazdırdık.
+  		video.load(); // Player 'ı yeniledik
+  		video.play(); // Player yenilendikten sonra çalmasını sağladık.
+	});
+});
+	
+</script>
+</html>
