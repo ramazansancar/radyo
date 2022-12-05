@@ -1,2 +1,3 @@
-# Radyo
-JSON ile Radyo Player
+# Radio Player
+
+Basic Radio Player with JSON
