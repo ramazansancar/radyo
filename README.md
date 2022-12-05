@@ -1,2 +1,2 @@
-# radyo
+# Radyo
 JSON ile Radyo Player
