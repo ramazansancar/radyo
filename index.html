@@ -36,8 +36,13 @@
 	}
 	
 	option:disabled {
-    background-color: darkgray;
-}
+        background-color: darkgray;
+    }
+
+    .description{
+        margin-left: 50px;
+        padding-bottom: 10px;
+    }
 	</style>
 </head>
 <body>
@@ -52,13 +57,16 @@
 			<option disabled selected>Seçiniz</option>
 		</select>
 	</div>
+    <div class="description">
+        Open Source: <a href="https://github.com/ramazansancar/radyo" target="_blank">Github</a> | <a href="https://github.com/ramazansancar/radyo/issues/new/choose" target="_blank">Radio Request</a>
+    </div>
 </div>
 </body>
 <script type="text/javascript">
 $(document).ready(function(){
 	var video = document.getElementById('radyo_player'); // Player 'a uğlaşmak için kullandık
 	video.volume = 0.3;
-	$.getJSON("radyo.json", function(obj) {
+	$.getJSON("/radyo.json", function(obj) {
     	$.each(obj.radyo_listesi,function(key,value){
 			if(value.status == true){
 				var ekle = $('<option></option>').val(value.adres).text(value.adi);

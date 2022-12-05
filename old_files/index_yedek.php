@@ -34,12 +34,6 @@ $(document).ready(function() {
   <option value="http://195.142.3.82/power/PowerFM_mpeg_128_home/icecast.audio">PowerFM</option>
   <option value="http://195.142.3.82/power/PowerTurk_mpeg_128_home/icecast.audio">PowerTürk</option>
   <option value="audi">Audi</option>
-  <option value="audi">Audi</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-  <option value="audi">Audi</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
 </select>
 </body>
 <script type="text/javascript">
