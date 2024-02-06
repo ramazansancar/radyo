@@ -1,95 +1,289 @@
-<meta charset="UTF-8">
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Radyo Player | ramazansancar.com.tr</title>
-	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.0.min.js"></script>-->
-	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<title>Radyo Çalar | ramazansancar.com.tr</title>
+	<meta charset="UTF-8">
 	<style>
+	/* General styles */
 	body {
+		height: 100%;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		background: darkgray;
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
 	}
 
-	.app{
-		margin: 20% 0 0 33%;
+	.container {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	/* Header styles */
+	header {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	/* Footer styles */
+	footer {
+		padding: 10px;
+		background-color: #f8f8f8;
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	/* Select box styles */
+	#radioSelect {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 5px;
+		border: 1px solid #ccc;
+	}
+
+	/* Responsive styles */
+	@media (min-width: 768px) {
+		/* Tablet and desktop */
+		.container {
+			padding: 40px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		/* Desktop */
+		.container {
+			padding: 60px;
+		}
+	}
+
+	/* Box Styles */
+	.radioBox {
+		background-color: #f3f3f3;
+		border-radius: 10px;
+		max-width: 300px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	/* Radio select box styles */
+	.radioBox select {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: none;
+		border-radius: 5px;
+	}
+
+	/* Video player styles */
+	.radioBox video {
+		width: 100%;
 		height: auto;
-		width: 350px;
-		background-color: gray;
-		border-radius: 25px;
+		border-radius: 5px;
 	}
 
-	.player video {
-		width: 350px;
-		height: 50px;
+	/* Volume control styles */
+	.radioBox input[type="range"] {
+		width: 100%;
+		margin-top: 10px;
 	}
 
-	.selectbox{
-		margin: 10px;
-		margin-left: 55px;
-		padding: 10px 0 15px 25px;
+	#radioName {
+		font-weight: bold;
 	}
 
-	select#radyolar{
-		width: 200px;
-		height: 50px;
+	/* Responsive design media queries */
+	@media screen and (max-width: 768px) and (min-width: 320px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+		.radioBox {
+			max-width: 90%;
+			padding: 10px;
+		}
 	}
-	
-	option:disabled {
-        background-color: darkgray;
-    }
 
-    .description{
-        margin-left: 50px;
-        padding-bottom: 10px;
-    }
+	/* Tablet ve büyük ekranler için stil kuralları */
+	@media (min-width: 768px) {
+		.radioBox {
+			max-width: 90%;
+			padding: 10px;
+			/* Özel stil kuralları tablet ve büyük ekranler için buraya yazılır */
+		}
+	}
+
+	/* Mobil cihazlar için stil kuralları */
+	@media (max-width: 767px) {
+		.radioBox {
+			max-width: 90%;
+			padding: 10px;
+			/* Özel stil kuralları mobil cihazlar için buraya yazılır */
+		}
+	}
+
+	/* Description styles */
+	.description {
+		margin: 15px;
+		padding: 0px;
+		background-color: #f8f8f8;
+		text-align: center;
+		border-radius: 10px;
+	}
 	</style>
+	<!--<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+	<script src="https://unpkg.com/video.js/dist/video.js"></script>
+	<script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>-->
 </head>
 <body>
-<div class="app">
-	<div class="player">
-		<video id="radyo_player" controls="" autoplay="1" name="media" volume="0.3">
-			<source id="radyo" src="https://live.powerapp.com.tr/fenomen/mpeg/icecast.audio" type="audio/mp3">
-		</video>
+	<div class="container">
+		<div class="radioBox">
+			<h1 style="text-align: center;">Radio Player</h1>
+			<select id="radioSelect">
+				<option value="" disabled selected>Select Radio</option>
+			</select>
+			<div>
+				<p>Now Playing: <span id="radioName"></span></p>
+			</div>
+			<video id="videoPlayer" poster="" controls="" autoplay="1" name="media" volume="0.2" preload="metadata" class="video-js vjs-fluid vjs-default-skin" data-setup='{}'>
+				<source src="" type="audio/mp3">
+			</video>
+			<input type="range" id="volumeControl" min="0" max="1" step="0.001" value="0.15"/>
+		</div>
+		<div class="description">
+			<p>
+				Open Source: <a href="https://github.com/ramazansancar/radyo" target="_blank">Github</a> | <a href="https://github.com/ramazansancar/radyo/issues/new/choose" target="_blank">Radio Request</a>
+			</p>
+		</div>
 	</div>
-	<div class="selectbox">
-		<select id="radyolar">
-			<option disabled selected>Seçiniz</option>
-		</select>
-	</div>
+</body>
+<!--<div class="app">
     <div class="description">
         Open Source: <a href="https://github.com/ramazansancar/radyo" target="_blank">Github</a> | <a href="https://github.com/ramazansancar/radyo/issues/new/choose" target="_blank">Radio Request</a>
     </div>
-</div>
-</body>
+</div>-->
 <script type="text/javascript">
-$(document).ready(function(){
-	var video = document.getElementById('radyo_player'); // Player 'a uğlaşmak için kullandık
-	video.volume = 0.3;
-	$.getJSON("/radyo.json", function(obj) {
-    	$.each(obj.radyo_listesi,function(key,value){
-			if(value.status == true){
-				var ekle = $('<option></option>').val(value.adres).text(value.adi);
-				$("#radyolar").append(ekle);
-			}else{
-				var ekle = $('<option disabled></option>').val(value.adres).text(value.adi);
-				$("#radyolar").append(ekle);
+	const isDev = false;
+	var radioListUrl = 'https://www.ramazansancar.com.tr/radyo.json'; 
+	if(isDev) {
+		radioListUrl = 'https://radyo.json';
+	}
+
+	// Old local storage data convert to new version
+	if(localStorage.getItem('radyoSes') != null){
+		localStorage.setItem('radioVolume', localStorage.getItem('radyoSes'));
+		localStorage.removeItem('radyoSes');
+	}
+
+	if(localStorage.getItem('radyoUrl') != null){
+		localStorage.setItem('radioUrl', localStorage.getItem('radyoUrl'));
+		localStorage.removeItem('radyoUrl');
+	}
+
+	if(localStorage.getItem('radyoAdi') != null){
+		localStorage.setItem('radioName', localStorage.getItem('radyoAdi'));
+		localStorage.removeItem('radyoAdi');
+	}
+
+	var radioSelect = document.getElementById('radioSelect');
+	var videoPlayer = document.getElementById('videoPlayer');
+	var volumeControl = document.getElementById('volumeControl');
+	var radioName = document.getElementById('radioName');
+	var radioList = [];
+	var filteredRadios = [];
+	//var player = videojs('videoPlayer'); // Radio player for m3u8
+
+	// Default volume set
+	videoPlayer.volume =  localStorage.getItem('radioVolume') || 0.15;
+	volumeControl.value = localStorage.getItem('radioVolume') || 0.15;
+
+	// Play function
+	const Play = (url, name, image) => {
+		videoPlayer.src = url;
+		videoPlayer.play();
+		//player.play();
+		radioSelect.value = url;
+		// Title and radio name changed
+		document.title = name+' - Radyo Player | ramazansancar.com.tr' // Title değiştirdik.
+		radioName.textContent = name;
+		localStorage.setItem('radioUrl',url);
+		localStorage.setItem('radioName',name);
+		//var radyoPoster = document.createAttribute("poster");
+		//radyoPoster.value = image;
+		//videoPlayer.setAttributeNode(radyoPoster);
+	}
+
+	if(localStorage.getItem('radioUrl') != null && localStorage.getItem('radioName') != null) {
+		Play(localStorage.getItem('radioUrl'),localStorage.getItem('radioName'),'http://127.0.0.1:8080/radyo/posters/meu_radyo_logo.png');
+	}
+
+	if(localStorage.getItem('radioVolume') != null) {
+		videoPlayer.volume = localStorage.getItem('radioVolume');
+		volumeControl.value = localStorage.getItem('radioVolume');
+	}else if(localStorage.getItem('radioVolume') == null) {
+		videoPlayer.volume = 0.15;
+		volumeControl.value = 0.15;
+	}
+
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			if (xhr.status === 200) {
+				radioList = JSON.parse(xhr.responseText);
+				
+				// Radio list select box options append
+				for (var i = 0; i < radioList.length; i++) {
+					var radyo = radioList[i];
+					if (!radyo.hidden) {
+						var option = document.createElement('option');
+						option.value = radyo.url;
+						option.textContent = radyo.name;
+						option.dataset.name = radyo.name;
+						option.dataset.url = radyo.url;
+						//option.dataset.image = radyo.image;
+						if (!radyo.status) {
+							option.disabled = true;
+						}
+						radioSelect.appendChild(option);
+					}
+				}
+				if(localStorage.getItem('radioName') == null && localStorage.getItem('radioUrl') == null){
+					// filter active radyo and play
+					filteredRadios = radioList.filter(radio => radio.status == true);
+					Play(filteredRadios[0].url,filteredRadios[0].name)
+				}
+				// Local storage data set
+				radioSelect.value = localStorage.getItem('radioUrl');
+				radioName.textContent = localStorage.getItem('radioName');
+			} else {
+				console.error('JSON dosyası okunamadı. Hata kodu: ' + xhr.status);
 			}
-    	});
+		}
+	};
+	xhr.open('GET', radioListUrl, true);
+	xhr.send();
+	
+	radioSelect.addEventListener('change', function(event) {
+		if(event.target.selectedOptions["0"].disabled) return false;
+		if(event.target.selectedOptions["0"].innerText == localStorage.getItem('radioName')) return false;
+		console.log(event.target.selectedOptions["0"].innerText)
+		var selectedRadyo = radioSelect.value;
+		if (selectedRadyo) {
+			document.title = event.target.selectedOptions["0"].innerText+' - Radyo Player | ramazansancar.com.tr' // Title değiştirdik.
+			Play(selectedRadyo,event.target.selectedOptions["0"].innerText,'http://127.0.0.1:8080/radyo/posters/meu_radyo_logo.png')
+		} else {
+			videoPlayer.pause();
+			videoPlayer.src = '';
+		}
 	});
 
-	document.querySelector('select').addEventListener("change", (event) => { // Select Değişim Yakaladık.
-		//console.log(event)
-		var video = document.getElementById('radyo_player'); // Player 'a uğlaşmak için kullandık
-		var source = document.getElementById('radyo');// Player 'a uğlaşmak için kullandık
-		var radyo_isim = document.getElementById("radyolar");
-		var radyo_deger = document.getElementById("radyolar").value; // Select de seçtiğimiz Radyo adresini bir var 'a atadık.
-		document.title = event.target.selectedOptions["0"].innerText+' - Radyo Player | ramazansancar.com.tr' // Title değiştirdik.
-  		source.src = radyo_deger; // Seçilen Radyo adresini player da src="{buraya}" yazdırdık.
-  		video.load(); // Player 'ı yeniledik
-  		video.play(); // Player yenilendikten sonra çalmasını sağladık.
+	// Ses Control volume changed event
+	volumeControl.addEventListener('input', function() {
+		var sesDegeri = volumeControl.value;
+		videoPlayer.volume = sesDegeri;
+		localStorage.setItem('radioVolume', sesDegeri);
+		volumeControl.value = sesDegeri;
 	});
-});
 	
 </script>
 </html>

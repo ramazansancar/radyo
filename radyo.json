@@ -1,65 +1,261 @@
-{
-	"radyo_listesi":[
-	{
-		"adres": "-",
-		"adi": "-",
-		"status": false
-	},{
-		"adres": "https://live.powerapp.com.tr/fenomen/mpeg/icecast.audio",
-		"adi": "Radyo Fenomen",
-		"status": true
-	},{
-		"adres": "https://live.powerapp.com.tr/fenomenturk/mpeg/icecast.audio",
-		"adi": "Fenomen Türk",
-		"status": true
-	},{
-		"adres": "https://live.powerapp.com.tr/fenomenpop/mpeg/icecast.audio",
-		"adi": "Fenomen Pop",
-		"status": true
-	},{
-		"adres": "https://live.powerapp.com.tr/fenomenclubbin/mpeg/icecast.audio",
-		"adi": "Fenomen Clubbin",
-		"status": true
-	},{
-		"adres": "https://live.powerapp.com.tr/FenomenDans/mpeg/icecast.audio",
-		"adi": "Fenomen Dans",
-		"status": false
-	},{
-		"adres": "https://live.powerapp.com.tr/fenomenyaz/mpeg/icecast.audio",
-		"adi": "Fenomen Yaz",
-		"status": false
-	},{
-		"adres": "https://live.powerapp.com.tr/fenomenrap/mpeg/icecast.audio",
-		"adi": "Fenomen Rap",
-		"status": true
-	},{
-		"adres": "https://live.powerapp.com.tr/FenomenAkustik/mpeg/icecast.audio",
-		"adi": "Fenomen Akustik",
-		"status": false
-	},{
-		"adres": "https://live.powerapp.com.tr/FenomenOriental/mpeg/icecast.audio",
-		"adi": "Fenomen Oriental",
-		"status": false
-	},{
-		"adres": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER_FM_SC?/",
-		"adi": "Super FM",
-		"status": true
-	},{
-		"adres": "https://live.powerapp.com.tr/powerfm/mpeg/icecast.audio",
-		"adi": "PowerFM",
-		"status": true
-	},{
-		"adres": "https://live.powerapp.com.tr/powerturk/mpeg/icecast.audio",
-		"adi": "PowerTürk",
-		"status": true
-	},{
-		"adres": "http://radyo.mersin.edu.tr:8000/meu",
-		"adi": "*Mersin Üni Radyo",
-		"description": "SSL Connection Error",
-		"status": false
-	},{
-		"adres": "https://alanyafm.80.yayin.com.tr/;",
-		"adi": "Alanya Fm",
-		"status": true
-	}
-]}
+[{
+	"name": "-",
+	"url": "-",
+	"type": "audio/mp3",
+	"status": false,
+	"hidden": true
+},{
+	"name": "Radyo Fenomen",
+	"url": "https://live.powerapp.com.tr/fenomen/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false,
+	"image": "https://www.ramazansancar.com.tr/radyo/posters/radyo_fenomen.png"
+},{
+	"name": "Fenomen Türk",
+	"url": "https://live.powerapp.com.tr/fenomenturk/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"name": "Fenomen Karışık",
+	"url": "https://live.powerapp.com.tr/fenomenkarisik/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"name": "Fenomen Pop",
+	"url": "https://live.powerapp.com.tr/fenomenpop/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"name": "Fenomen Dans",
+	"url": "https://live.powerapp.com.tr/fenomendans/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"name": "Fenomen 2010",
+	"url": "https://live.powerapp.com.tr/fenomen2010/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"name": "Fenomen Türkçe Rap",
+	"url": "https://live.powerapp.com.tr/fenomenturkrap/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"name": "Fenomen Clubbin",
+	"url": "https://live.powerapp.com.tr/fenomenclubbin/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"name": "Fenomen Rap",
+	"url": "https://live.powerapp.com.tr/fenomenrap/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"name": "Fenomen Oriental",
+	"url": "https://live.powerapp.com.tr/fenomenoriental/mpeg/icecast.audio",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://live.powerapp.com.tr/fenomenakustik/mpeg/icecast.audio",
+	"name": "Fenomen Akustik",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://live.powerapp.com.tr/fenomenyaz/mpeg/icecast.audio",
+	"name": "Fenomen Yaz",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER_FM_SC?/",
+	"name": "Super FM",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://live.powerapp.com.tr/powerfm/mpeg/icecast.audio",
+	"name": "PowerFM",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://live.powerapp.com.tr/powerturk/mpeg/icecast.audio",
+	"name": "PowerTürk",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://radyo.mersin.edu.tr:8000/meu",
+	"name": "*Mersin Üniversitesi Radyo",
+	"description": "SSL Connection Error",
+	"type": "audio/mp3",
+	"status": false,
+	"hidden": false
+},{
+	"url": "https://stream.medipol.edu.tr/stream",
+	"name": "Istanbul Medipol Universitesi Radyosu",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://radyofirat.radyotvyayini.com:8920/;",
+	"name": "*Fırat Universitesi Radyo 89.2",
+	"type": "audio/mp3",
+	"status": false,
+	"hidden": true
+},{
+	"url": "https://alanyafm.80.yayin.com.tr/;",
+	"name": "Alanya Fm",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "-",
+	"name": "Radyo Madyo / Gitassi",
+	"type": "audio/mp3",
+	"status": false,
+	"hidden": false
+},{
+	"url": "https://stream.radyo45lik.com:4545/",
+	"name": "Radyo 45lik",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://server.gitassi.com:4545/",
+	"name": "Radyo 45lik - Backup",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://yayin.jumboserver.net:9100/",
+	"name": "Radyo Alaturka",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://yayin.radyomadyo.com:8006/",
+	"name": "Karma Türk",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://yayin.radyomadyo.com:8002/",
+	"name": "Rnameo Mix",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://stream.xrnameo.com.tr:8770/",
+	"name": "X Rnameo",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://yayin.radyomadyo.com:8004/",
+	"name": "Karma Türk Slow",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://yayin.radyomadyo.com:8014/",
+	"name": "Radyo Ahenk",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://yayin.radyoarabesk.com.tr:8000/",
+	"name": "Radyo Arabesk",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://yayin.radyoseymen.com.tr:1070/",
+	"name": "Radyo Seymen",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://yayin.radyomadyo.com:8012/",
+	"name": "Karadeniz Akustik",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://yayin.radyomadyo.com:8008/",
+	"name": "Radyo Türkü",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://yayin.radyomadyo.com:8010/",
+	"name": "Jazz'la",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://rockfm.rockfm.com.tr:9450/",
+	"name": "Rock FM",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://yayin.radyoseymen.com.tr:1070/",
+	"name": "Radyo Seymen",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://yayin.istanbulfm.com.tr/istanbulfm",
+	"name": "İstanbul FM",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://yayin.istanbulfm.com.tr/",
+	"name": "İstanbul FM - Yedek 1",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "https://46.20.4.50/",
+	"name": "İstanbul FM - Yedek 2",
+	"type": "audio/mp3",
+	"status": true,
+	"hidden": false
+},{
+	"url": "http://45.32.154.169:9300/;",
+	"name": "İstanbul FM - Yedek 3",
+	"type": "audio/mp3",
+	"status": false,
+	"hidden": false
+},{
+	"url": "stream",
+	"name": "Rnameo",
+	"type": "audio/mp3",
+	"status": false,
+	"hidden": true
+},{
+	"url": "stream",
+	"name": "Rnameo",
+	"type": "audio/mp3",
+	"status": false,
+	"hidden": true
+},{
+	"url": "stream",
+	"name": "Rnameo",
+	"type": "audio/mp3",
+	"status": false,
+	"hidden": true
+}]
